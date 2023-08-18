@@ -3,10 +3,10 @@
     <h2 class="mb-2 text-md text-center">{{ product.title }}</h2>
     <p>Price <span class="font-bold">{{ product.price | currency:'RUB' }}</span></p>
     <button 
-        class="border py-2 px-4 rounded bg-pink-400" 
+        class="border py-2 px-4 rounded bg-pink-600" 
         (click)="details = !details"
         [ngClass]="{
-            'bg-pink-400': !details,
+            'bg-pink-600': !details,
             'bg-pink-300': details
         }"
     >

@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <input type="text" class="border w-full py-2 px-4 mb-2" placeholder="Product name" formControlName="title">
+    <p class="text-red-600 font-medium mb-2" *ngIf="this.form.get('title')?.errors?.minlength && this.form.get('title')?.touched">
+        Please fill the title field (3 symbols min)
+    </p>
+    <button type="submit" class="py-2 px-4 rounded bg-pink-600 text-white">
+        Create
+    </button>
+</form>
